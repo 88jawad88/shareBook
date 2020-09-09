@@ -1,7 +1,7 @@
-const app = require('./app');
-const mongoose = require('mongoose');
-const port = app.get('port');
-const URI = process.env.MONGO_URL || 'mongodb://localhost:27017/shareBook-db';
+const app = require("./app");
+const mongoose = require("mongoose");
+const port = app.get("port");
+const URI = process.env.MONGO_URL || "mongodb://localhost:27017/shareBook-db";
 
 mongoose
   .connect(URI, {
@@ -10,7 +10,7 @@ mongoose
     useCreateIndex: true,
   })
   .then(() => {
-    console.log('shareBook-db is connected...');
+    console.log("shareBook-db is connected...");
     app.listen(port, () =>
       console.log(`the server is running on port ${port}`)
     );
