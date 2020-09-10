@@ -66,8 +66,9 @@
   #search-book {
     font-size: 22px;
     border: 2px solid #000000;
-    width: 40px;
+    width: fit-content;
     margin-bottom: 10px;
+    padding: 12px 12px;
   }
   #search-btn {
     border: 2px solid #fffbfb;
