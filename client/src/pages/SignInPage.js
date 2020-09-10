@@ -1,13 +1,14 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { USER_URL } from "../constants/urls";
 class SignInPage extends React.Component {
-  state = { email: '', password: '' };
+  state = { email: "", password: "" };
   handleInput = (event) => {
     this.setState({ [event.target.name]: event.target.value });
     this.props.handleSignIn();
   };
   signIn = (Email) => {
-    fetch(`/api/v1/users/${Email}`)
+    fetch(`${USER_URL}/${Email}`)
       .then((res) => res.json())
       .then((res) => this.props.handleUserName(res[0].firstName))
       .catch((err) => console.log(err));
@@ -22,7 +23,7 @@ class SignInPage extends React.Component {
             <p>
               new customer? start here
               <NavLink exact to="./sign-up" className="sign-up-now">
-                {' '}
+                {" "}
                 sign up
               </NavLink>
               now!
