@@ -45,7 +45,15 @@
 /*       كل ما هو متعلق بالهواتف والتابلت    */
 /*---------------------------------------------*/
 
-@media (max-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .searchBook-img-bacground p,
+  .searchBook-img-bacground h3,
+  .search-bar {
+    line-height: 100px;
+  }
+  .searchBook-img-bacground p {
+    padding: 50px 0 0 0;
+  }
 }
 @media (max-width: 768px) {
   .searchBook-img-bacground {
@@ -74,5 +82,12 @@
     border: 2px solid #fffbfb;
     font-size: 27px;
     padding: 5px 22px;
+  }
+}
+@media (min-width: 470px) and(max-width:768px) {
+  .searchBook-img-bacground p,
+  .searchBook-img-bacground h3,
+  .search-bar {
+    line-height: 81px;
   }
 }
